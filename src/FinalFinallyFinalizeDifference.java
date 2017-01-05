@@ -15,6 +15,20 @@ public class FinalFinallyFinalizeDifference {
         //x = 20; // Compile time error because can't re-assign a value to a final variable
         System.out.println("value of x is : "+x);
 
+        System.out.println("********** finally uses **********");
+        /**
+         * finally - a block always associated with try catch / try or catch to clean up code.
+         * it will be executed always irrespective of whether exception is raised or not, handed or not.
+         */
+
+        try{
+            int[] arr = {1,2,3,4,5};
+            System.out.println(arr[5]);
+        }catch (ArrayIndexOutOfBoundsException ai){
+            System.out.println("Exception : "+ai);
+        }finally {
+            System.out.println("Clean up the code associated in try block \n This block will be always executed");
+        }
 
     }
 }
