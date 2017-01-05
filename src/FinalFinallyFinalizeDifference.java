@@ -30,5 +30,17 @@ public class FinalFinallyFinalizeDifference {
             System.out.println("Clean up the code associated in try block \n This block will be always executed");
         }
 
+        System.out.println("---------- finalize uses ----------");
+        /**
+         * Clean up the code associated to object i:e; free up the memory
+         */
+        FinalFinallyFinalizeDifference object = new FinalFinallyFinalizeDifference();
+        System.out.println("Finalizing......");
+        try {
+            object.finalize();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        System.out.println(".......object cleaned up/Finalized");
     }
 }
